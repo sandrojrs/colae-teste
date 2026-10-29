@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Sem maximum-scale: quem tem baixa visão precisa poder dar zoom. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F0E13" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+    <meta name="description" content="Colaê: conheça gente perto de você para encontros, amizade e rolês." />
+    <title>Colaê</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        overflow: hidden;
+        margin: 0;
+        background: #ffffff;
+        font-family: 'PlusJakartaSans_400Regular', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+      /* Campos e botões não herdam a fonte por padrão no navegador (caíam em Times New Roman). */
+      input,
+      textarea,
+      button,
+      select {
+        font-family: inherit;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+      /* Tela de carregamento: aparece até o app montar (o React substitui o conteúdo do #root). */
+      .boot {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+      }
+      .boot svg {
+        width: 96px;
+        height: auto;
+      }
+      .boot .spinner {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 3px solid #2c2a33;
+        border-top-color: #e44fcb;
+        animation: boot-spin 0.9s linear infinite;
+      }
+      @keyframes boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot .spinner {
+          animation: none;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0f0e13;
+        }
+      }
+    </style>
+  <link rel="icon" href="/colae-teste/favicon.ico"/></head>
+
+  <body>
+    <noscript>Ative o JavaScript para usar o Colaê.</noscript>
+    <div id="root">
+      <div class="boot" role="status" aria-label="Carregando o Colaê">
+        <svg viewBox="100 100 1154 830" aria-hidden="true">
+          <defs>
+            <linearGradient id="boot-grad" x1="104" y1="925" x2="1250" y2="105" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#7A0A6E" />
+              <stop offset="1" stop-color="#F01ED8" />
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#boot-grad)" stroke-width="160">
+            <path d="M830.1 715.8 A270 270 0 1 0 686.7 290.3" />
+            <path d="M686.7 290.3 L475 565" stroke-linecap="round" />
+            <path d="M523.9 314.2 A270 270 0 1 0 667.3 739.7" />
+            <path d="M667.3 739.7 L879 465" stroke-linecap="round" />
+          </g>
+        </svg>
+        <div class="spinner"></div>
+      </div>
+    </div>
+  <script src="/colae-teste/_expo/static/js/web/__expo-metro-runtime-9f1a7b6acd20011e290bc79f0164ae37.js" defer></script><script src="/colae-teste/_expo/static/js/web/__common-09e5828ebc959a19370fff30968ec4a1.js" defer></script><script src="/colae-teste/_expo/static/js/web/entry-01cf7636b28be5ec2bea1025835c4a8a.js" defer></script>
+</body>
+</html>
